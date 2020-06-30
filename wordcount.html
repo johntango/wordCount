@@ -7,6 +7,7 @@
     text = text.replace(/[.,]/g, "");
     text = text.toLocaleLowerCase();
     const wordArray = text.split(" ");
+    console.log(wordArray);
     // create object and make keys the "words" and the value the "word count"
     const wordCount = {};
     wordArray.forEach((item) => {
@@ -17,6 +18,9 @@
     });
     // turn objects into an array of arrays
     let myArray = Object.entries(wordCount);
+
+
+
     // now sort the arrays based on the count number
     let bArray = myArray.sort((a, b) =>
       a[1] < b[1] ? 1 : a[1] > b[1] ? -1 : 0
